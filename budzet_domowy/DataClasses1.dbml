@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="baza_danych" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\baza_danych.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="budzet_domowy.Properties.Settings" SettingsPropertyName="baza_danychConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.forma_platnosci" Member="forma_platnosci">
+    <Type Name="forma_platnosci">
+      <Column Name="id_forma_platnosci" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nazwa" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Association Name="forma_platnosci_operacje" Member="operacje" ThisKey="id_forma_platnosci" OtherKey="id_forma_platnosci" Type="operacje" />
+    </Type>
+  </Table>
+  <Table Name="dbo.kategoria" Member="kategoria">
+    <Type Name="kategoria">
+      <Column Name="id_kategoria" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nazwa" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="id_podkategoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="typ" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="kategoria_kategoria" Member="kategoria2" ThisKey="id_kategoria" OtherKey="id_podkategoria" Type="kategoria" />
+      <Association Name="kategoria_operacje" Member="operacje" ThisKey="id_kategoria" OtherKey="id_kategoria" Type="operacje" />
+      <Association Name="kategoria_kategoria" Member="kategoria1" ThisKey="id_podkategoria" OtherKey="id_kategoria" Type="kategoria" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.uzytkownicy" Member="uzytkownicy">
+    <Type Name="uzytkownicy">
+      <Column Name="id_uzytkownika" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="imie" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nazwisko" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="uzytkownicy_operacje" Member="operacje" ThisKey="id_uzytkownika" OtherKey="id_uzytkownika" Type="operacje" />
+    </Type>
+  </Table>
+  <Table Name="dbo.operacje" Member="operacje">
+    <Type Name="operacje">
+      <Column Name="id_operacji" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="kwota" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="id_kategoria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_uzytkownika" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_forma_platnosci" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="opis" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="forma_platnosci_operacje" Member="forma_platnosci" ThisKey="id_forma_platnosci" OtherKey="id_forma_platnosci" Type="forma_platnosci" IsForeignKey="true" />
+      <Association Name="kategoria_operacje" Member="kategoria" ThisKey="id_kategoria" OtherKey="id_kategoria" Type="kategoria" IsForeignKey="true" />
+      <Association Name="uzytkownicy_operacje" Member="uzytkownicy" ThisKey="id_uzytkownika" OtherKey="id_uzytkownika" Type="uzytkownicy" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
