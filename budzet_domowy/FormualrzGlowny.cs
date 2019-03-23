@@ -51,8 +51,8 @@ namespace budzet_domowy
 
             uzytkownicy wy = new uzytkownicy
             {
-                imie = txb_imie.Text,
-                nazwisko = txb_nazwisko.Text
+                imie = "d",
+                nazwisko = "d"
             };
             db.uzytkownicy.InsertOnSubmit(wy);
             try
