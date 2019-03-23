@@ -14,7 +14,7 @@
         <elementListCompartment Id="b67287a4-88ba-4e9f-917c-f20252c3f506" absoluteBounds="0.765, 6.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="ad7ed012-7bb1-4786-bd75-69db9014c3bf" absoluteBounds="0.75, 4.125, 2, 1.3862939453125005">
+    <classShape Id="ad7ed012-7bb1-4786-bd75-69db9014c3bf" absoluteBounds="0.75, 4.125, 2, 1.3862939453124996">
       <DataClassMoniker Name="/DataClasses1DataContext/uzytkownicy" />
       <nestedChildShapes>
         <elementListCompartment Id="416c4b01-9736-425a-a9fd-fe3e870c4945" absoluteBounds="0.765, 4.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
@@ -33,14 +33,14 @@
         <classShapeMoniker Id="29cea22f-a096-4fdd-a590-eab348728ec6" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 1.97199625651042); (3.5 : 1.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 1.97199625651042); (3.5 : 1.97199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/forma_platnosci/forma_platnosci_operacje" />
       <nodes>
         <classShapeMoniker Id="18b0a043-cae6-4303-98e6-7766e83215c2" />
         <classShapeMoniker Id="a5d6ac75-10a3-43f0-8ac9-c0ab8993514b" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 7.03929768880208); (4.5 : 7.03929768880208); (4.5 : 3.03049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 7.03929768880208); (4.5 : 7.03929768880208); (4.5 : 3.03049967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClasses1DataContext/kategoria/kategoria_operacje" />
       <nodes>
         <classShapeMoniker Id="29cea22f-a096-4fdd-a590-eab348728ec6" />

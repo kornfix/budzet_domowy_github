@@ -74,6 +74,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uc_Dodaj_uzytkownika.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Dodaj_uzytkownika.Designer.cs">
+      <DependentUpon>uc_Dodaj_uzytkownika.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormualrzGlowny.resx">
       <DependentUpon>FormualrzGlowny.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +92,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="uc_Dodaj_uzytkownika.resx">
+      <DependentUpon>uc_Dodaj_uzytkownika.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
